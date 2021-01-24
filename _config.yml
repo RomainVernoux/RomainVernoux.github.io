@@ -4,27 +4,28 @@ highlighter: pygments
 
 # Permalinks
 permalink: pretty
-relative_permalinks: true
+#relative_permalinks: true
 
 # Setup
 title: Romain Vernoux
-tagline: ''
-description: >-
-  Head of Labs and Delivery at Zenika.
-  IT specialist focused on Full-Stack development, Software Craftsmanship, Agile and DevOps.
-  Travel enthusiast and passionate photographer.
-  Alumnus of ENS Paris-Saclay
+tagline: About me
+description: |
+  IT specialist focused on Software Craftsmanship, Agile and DevOps.<br>
+  Head of Labs and Delivery at Zenika.<br>
+  Travel enthusiast and passionate photographer.<br>
+  Alumnus of ENS Paris-Saclay.<br>
 url: ''
 baseurl: ''
 
 author:
   name: Romain Vernoux
-  url: https://twitter.com/RomainVernoux
 
 paginate: 5
 
 # Custom vars
 version: 2.1.0
 
-github:
-  repo: https://github.com/RomainVernoux
+links:
+  twitter: https://twitter.com/RomainVernoux
+  github: https://github.com/RomainVernoux
+  flickr: https://www.flickr.com/photos/romainvernoux/
