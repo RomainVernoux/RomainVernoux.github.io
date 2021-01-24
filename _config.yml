@@ -1,0 +1,16 @@
+title: Romain Vernoux
+email: vernoux.romain@gmail.com
+description: >-
+  Head of Labs and Delivery at Zenika.
+  IT specialist focused on Full-Stack development, Software Craftsmanship, Agile and DevOps.
+  Travel enthusiast and passionate photographer.
+  Alumnus of ENS Paris-Saclay
+baseurl: ""
+url: ""
+twitter_username: RomainVernoux
+github_username: RomainVernoux
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
