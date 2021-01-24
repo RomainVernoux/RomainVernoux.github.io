@@ -1,16 +1,30 @@
+# Dependencies
+markdown: redcarpet
+highlighter: pygments
+
+# Permalinks
+permalink: pretty
+relative_permalinks: true
+
+# Setup
 title: Romain Vernoux
-email: vernoux.romain@gmail.com
+tagline: ''
 description: >-
   Head of Labs and Delivery at Zenika.
   IT specialist focused on Full-Stack development, Software Craftsmanship, Agile and DevOps.
   Travel enthusiast and passionate photographer.
   Alumnus of ENS Paris-Saclay
-baseurl: ""
-url: ""
-twitter_username: RomainVernoux
-github_username: RomainVernoux
+url: ''
+baseurl: ''
 
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+author:
+  name: Romain Vernoux
+  url: https://twitter.com/RomainVernoux
+
+paginate: 5
+
+# Custom vars
+version: 2.1.0
+
+github:
+  repo: https://github.com/RomainVernoux
