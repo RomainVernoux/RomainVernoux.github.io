@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting Things Done with Gmail"
-date: 2021-01-30
+date: 2021-01-27
 categories: productivity english
 ---
 *This post, originally published in 2017 as "Getting Things Done with Inbox" has been updated to reflect the shutdown of Google Inbox in March 2019 and the addition of its main features to Gmail.*

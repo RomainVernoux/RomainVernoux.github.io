@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Kubernetes Engine, CircleCI and Traefik for a full-fledged GitOps platform in the cloud"
-date: 2021-01-31
+date: 2021-01-30
 categories: devops cloud english
 ---
 As teams start new projects, they usually waste precious time deploying and configuring a CI/CD pipeline from scratch.
