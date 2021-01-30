@@ -11,6 +11,8 @@ En sept ans, j'ai traversé, comme une majorité de bacheliers, quatre ans de co
 Sept ans dans l'enseignement secondaire de la République, et il faut l'avouer, sept ans à observer, plus ou moins passivement, l'incompétence d'un système idéaliste.
 Ses symptômes ? Irréalisme, inefficacité, paresse, hypocrisie.
 
+<!--more-->
+
 Mais avant d'expliquer davantage les raisons qui poussent un jeune de 17 ans en vacances à coucher son amertume sur le papier au lieu de profiter de ses vacances d'été bien méritées, procédons à un récapitulatif des faits, ma scolarité en quelques mots.
 J'omettrai volontairement tout ce qui se situe avant le collège, n'ayant que des souvenirs parcellaires de la maternelle et considérant avoir été épargné des déviances du système scolaire français grâce à mes professeurs alsaciens de CM1 et CM2 — si quelqu'un voit encore Mme Schmitt, dites-lui que je la remercie de son travail, d'avoir été si droite et rigoureuse ; si j'en suis là aujourd'hui, c'est en grande partie grâce à elle.
 

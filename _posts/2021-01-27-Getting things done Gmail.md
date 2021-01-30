@@ -14,6 +14,8 @@ For that, I fully rely on some core ceatures of *Gmail*.
 In this article, I will discuss fundamental issues of emails as we know them, then explain how David Allen's GTD ("Getting Things Done") method tackles these issues.
 Finally, I will describe how Gmail can be used as an easy and very efficient implementation of this time management system.
 
+<!--more-->
+
 ## The problem with emails
 
 For good reasons, emails have become the preferred communication medium inside companies, especially large ones.

@@ -19,6 +19,8 @@ baseurl: ''
 author:
   name: Romain Vernoux
 
+excerpt_separator: '<!--more-->'
+
 paginate: 5
 
 # Custom vars

@@ -11,6 +11,8 @@ Like most people, I did not need a lot of time in school to believe that there a
 But it took me years to understand that it is actually all about good and bad ways to *understand* things.
 This article is a lot about learning, and a bit about teaching if you see it as the action allowing others to learn efficiently.
 
+<!--more-->
+
 ## Let's start with a game
 
 Consider a simple game with a pawn moving on a board.

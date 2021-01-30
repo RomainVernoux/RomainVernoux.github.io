@@ -362,6 +362,11 @@ table.no-background tbody tr td{
   color: #9a9a9a;
 }
 
+.post-read-more {
+  text-decoration: none;
+  color: #9a9a9a;
+}
+
 /* Related posts */
 .related {
   padding-top: 2rem;

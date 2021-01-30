@@ -15,6 +15,8 @@ Je ne prétends pas détenir la vérité – comme vous le comprendrez bientôt,
 J'espère sincèrement que vous ne serez pas d'accord et que j'oublierai assez de choses pour que vous ayez de quoi me contredire.
 Ne vous privez pas, je répondrai à tout, dans la mesure du possible.
 
+<!--more-->
+
 J'aime les débats.
 Si vous me connaissez un peu, je ne vous apprends rien en disant que c'est l'une de mes activités favorites.
 Je les lance, je les provoque et – oui, je l'avoue ! — je prends presque systématiquement le point de vue contradictoire pour les rendre plus intéressants.

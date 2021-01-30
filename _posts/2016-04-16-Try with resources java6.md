@@ -15,6 +15,7 @@ In Android, support for *try-with-resources* was added in SDK 19 (Android 4.4), 
 In this article I will show why properly releasing resources can get tricky in the presence of errors, show Java 7's *try-with-resources* solution, then explain how it is mostly syntactic sugar for some Java 6 code.
 The takeaway is a general-purpose code snippet to start from and simplify, in order to get resource management right everytime, even in old Java environments.
 
+<!--more-->
 
 ## The problem
 

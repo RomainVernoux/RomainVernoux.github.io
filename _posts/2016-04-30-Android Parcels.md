@@ -9,6 +9,8 @@ To pass information between Activities and save states during the application li
 Like `Serializable` in Java, the `Parcelable` interface offers a marshalling mechanism to represent and transfer object instances as bytes.
 In this post I will present some of the differences between `Parcels` and `Serializable`, then explain how to implement the `Parcelable` interface correctly, in particular in a hierarchy of inherited classes.
 
+<!--more-->
+
 ## Why Parcel?
 
 Parcels are a lightweight alternative to `Serializable` for inter-process communication.
