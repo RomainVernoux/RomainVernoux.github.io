@@ -2,7 +2,8 @@
 layout: post
 title: "A try-with-resources equivalent for Java 6 and Android"
 date: 2016-04-16
-categories: java android english
+categories: java android
+tags: english
 ---
 In Java core libraries, resources such as network, files and databases can be accessed through a large range of low-level interfaces which all require to explicitly handle exceptions and release resources properly.
 As a consequence, writing such code is arguably more error-prone than in languages with high-level resource access methods, and it is actually quite common to find bugs related to flawed resource management in Java codebases.

@@ -2,7 +2,8 @@
 layout: post
 title: "The 3 levels of understanding"
 date: 2017-10-03
-categories: philisophy english
+categories: philisophy
+tags: english
 ---
 In the last couple of years, I have been a reader, a student, an apprentice, a researcher, a speaker, a trainer, and above all a passionate debater.
 These activities have something in common: they are all in some way about teaching and learning.

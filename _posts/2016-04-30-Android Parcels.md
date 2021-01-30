@@ -2,7 +2,8 @@
 layout: post
 title: "Parcels and inheritance in Android"
 date: 2016-04-30
-categories: java android english
+categories: java android
+tags: english
 ---
 To pass information between Activities and save states during the application lifecycle, Android uses `Parcel` objects.
 Like `Serializable` in Java, the `Parcelable` interface offers a marshalling mechanism to represent and transfer object instances as bytes.

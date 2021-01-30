@@ -2,7 +2,8 @@
 layout: post
 title: "Par définition, vous avez tort"
 date: 2013-07-06
-categories: société french
+categories: société
+tags: french
 ---
 Ne prenez pas ce texte pour ce qu'il n'est pas.
 Il ne s'agit pas d'un traité de philosophie.
