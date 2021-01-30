@@ -11,7 +11,7 @@ Sept ans dans l'enseignement secondaire de la République, et il faut l'avouer, 
 Ses symptômes ? Irréalisme, inefficacité, paresse, hypocrisie.
 
 Mais avant d'expliquer davantage les raisons qui poussent un jeune de 17 ans en vacances à coucher son amertume sur le papier au lieu de profiter de ses vacances d'été bien méritées, procédons à un récapitulatif des faits, ma scolarité en quelques mots.
-J'omettrai volontairement tout ce qui se situe avant le collège, n'ayant que des souvenirs parcellaires de la maternelle et considérant avoir été épargné des déviances du système scolaire français grâce à mes professeurs alsaciens de CM1 et CM2 — si quelqu'un voit encore Mme Schmitt, dites-lui que je la remercie de son travail, d'avoir été si droite et rigoureuse ; si j'en suis là aujourd'hui, c'est en grande partie grâce à elle.
+J'omettrai volontairement tout ce qui se situe avant le collège, n'ayant que des souvenirs parcellaires de la maternelle et considérant avoir été épargné des déviances du système scolaire français grâce à mes professeurs alsaciens de CM1 et CM2 — si quelqu'un voit encore Mme Schmitt, dites-lui que je la remercie de son travail, d'avoir été si droite et rigoureuse ; si j'en suis là aujourd'hui, c'est en grande partie grâce à elle.
 
 *Sixième*.
 Intrigué par ce plus grand bahut, amusé par l'appel des 250 sixièmes un par un au mégaphone au lieu d'afficher un listing des classes.
@@ -52,7 +52,7 @@ Les meilleurs élèves tirent les moins bons vers le haut ! Le collège, c'est 
 Pour l'avoir vécu, ces discours sont un tissu d'inepties.
 Il suffit tout d'abord d'avoir deux yeux et de ne pas être aussi hypocrite que ceux qui profèrent ces idioties pour observer que les hommes ne sont pas égaux par nature.
 Ils naissent différents physiquement, psychologiquement, et socialement, et évoluent de la même façon.
-Un bon cours de bio ou un papier de Darwin peut aider sur le sujet ; ce sont d'ailleurs ces différences qui constituent la force d'une espèce animale.
+Un bon cours de bio ou un papier de Darwin peut aider sur le sujet ; ce sont d'ailleurs ces différences qui constituent la force d'une espèce animale.
 L'égalité est un but théorique vers lequel l'État doit faire tendre les élèves, en proposant, par exemple, l'éducation à tous.
 Mais peindre un cheval blanc avec des rayures noires ne le transforme pas en zèbre, c'est pourquoi il y a, dans toutes les classes que je connais, de grosses différences de niveau.
 
@@ -71,7 +71,7 @@ Revenons maintenant à nos citations, que j'ai maintes fois entendu, avec plus o
 
 *Les meilleurs élèves tirent les moins bons vers le haut.* L'erreur consiste à penser que les élèves de niveaux différents vont se rapprocher.
 Au contraire, prenant conscience de leurs différences, j'ai surtout vu d'une part une sensation de dégoût, et de l'autre une jalousie, toutes deux maquillées par une fausse indifférence.
-Et si l'on peut penser que la cohabitation entre des élèves ayant des facilités et des élèves en difficulté est un moyen de faire comprendre qu'il existe une multitude de gens différents dans une société et qu'il faut vivre ensemble, je ne voudrais dire qu'une seule chose : mes parents m'avaient appris à respecter les gens qui réussissent moins bien que moi ; mes expériences de collège et de lycée et les problèmes qu'ont engendrés ces différences n'ont cessé de me faire douter de la véracité de cet enseignement.
+Et si l'on peut penser que la cohabitation entre des élèves ayant des facilités et des élèves en difficulté est un moyen de faire comprendre qu'il existe une multitude de gens différents dans une société et qu'il faut vivre ensemble, je ne voudrais dire qu'une seule chose : mes parents m'avaient appris à respecter les gens qui réussissent moins bien que moi ; mes expériences de collège et de lycée et les problèmes qu'ont engendrés ces différences n'ont cessé de me faire douter de la véracité de cet enseignement.
 
 *Le collège, c'est l'école de la vie, alors même si tu passes une scolarité pourrie, c'est une bonne chose pour toi ! Tu travailleras toujours avec des gens comme ça plus tard.*
 Joli retournement de la situation ! Être la cause, par son irréalisme quotidien, des problèmes de la vie collégienne, et dire que c'est pour préparer à la vie, c'est culotté. 
@@ -91,7 +91,7 @@ Les reconnaître est simple : ils refusent le débat et l'introspection, quelqu
 Le problème, dans cette grande débâcle de la non-sélection, c'est qu'elle fait croire aux élèves qu'ils sont capables d'atteindre leurs objectifs, quels qu'ils soient, et quel que soit l'écart entre cet objectif et leurs capacités.
 Je n'ai rien contre l'idée d'encourager les gens à poursuivre leurs buts, leurs rêves, bien au contraire, c'est le moteur de la motivation, et par extension du progrès.
 Mais il y a une différence entre donner de l'espoir et donner de faux espoirs, une limite bien trop souvent franchie par le système éducatif.
-Rendre possible, à une grande majorité d'élèves, l'accession aux filières les plus difficiles, a un double effet : d'abord, faire croire à ces élèves qu'ils ont les capacités pour le faire ; ensuite, comme je l'ai déjà dit, baisser le niveau de la filière, de l'examen, et par corollaire la valeur du diplôme la sanctionnant.
+Rendre possible, à une grande majorité d'élèves, l'accession aux filières les plus difficiles, a un double effet : d'abord, faire croire à ces élèves qu'ils ont les capacités pour le faire ; ensuite, comme je l'ai déjà dit, baisser le niveau de la filière, de l'examen, et par corollaire la valeur du diplôme la sanctionnant.
 Le fait est que l'on ne peut observer ce phénomène sur une courte période.
 Mais il n'en est pas moins existant : la comparaison de deux annales de bac de 1999 et 2009 pourrait servir de bon exemple, mais observer les différences entre les programmes avant et après 2001 suffit.
 
@@ -126,7 +126,7 @@ Faisons un test tout simple.
 Proposez à une assemblée de gens que vous connaissez au moins de vue une suite de propositions telles que "en moyenne, les noirs sont plus pauvres que les blancs", "d'un autre côté, le fait que les patrons paient les femmes moins cher s'explique : ils ne veulent pas rémunérer le travail qu'elles ne feront pas en congé maternité ou en congé maladie pour s'occuper des petits" ou encore "l'immigration est un problème, on ne peut pas accueillir toute la misère du monde".
 Comptez maintenant le nombre de fois que l'on vous a traité de raciste, de xénophobe, de machiste et de sexiste, et repensez à ce que vous avez dit.
 
-Le racisme, au sens strict, consiste en la constitution d'une hiérarchie au sein d'une espèce à partir de caractères spécifiques ; au sens large et malheureusement actuel, c'est un vaste et incompréhensible amalgame entre xénophobie, discrimination et ségrégation.
+Le racisme, au sens strict, consiste en la constitution d'une hiérarchie au sein d'une espèce à partir de caractères spécifiques ; au sens large et malheureusement actuel, c'est un vaste et incompréhensible amalgame entre xénophobie, discrimination et ségrégation.
 À ce titre, la première proposition "en moyenne, les noirs sont plus pauvres que les blancs" n'est ni raciste, ni xénophobe, c'est un fait démontrable statistiquement.
 Il n'y a pas de généralisation douteuse étant donné le "en moyenne", et l'erreur d'interprétation vient du manque de formulation politiquement correcte devant "les blancs" et "les noirs".
 De même dans la deuxième proposition, une majorité de personnes confondant allègrement "la différence de salaire s'explique" et "la différence de salaire se justifie" ou "la différence de salaire est naturelle", et dans la dernière proposition, les personnes se révoltant étant en fait contre les tentatives de solution (expulsions et naturalisations) et non contre l'annonce d'un problème.
@@ -151,7 +151,7 @@ Mais parlons-en justement, de ces professeurs, ces êtres étonnants qui se nomm
 Il existe, dans une version simplifiée des choses, plusieurs catégories de professeurs.
 La première distinction évidente pour tout un chacun serait faite entre un professeur intéressant et un professeur ennuyeux.
 Selon mon expérience personnelle, cette séparation scinde sauf exception la catégorie des professeurs motivés et/ou exerçant ce métier par vocation, et celle des professeurs blasés et/ou s'étant dit vers 20 ans que travailler 18h par semaine et profiter de beaucoup de vacances était un bon plan.
-N'oublions pas enfin d'évoquer les vieux singes qui feintent de ne pas aimer leur matière et de détester leur métier, mais qui ne manqueraient une heure de cours ou une sortie de fin d'année pour rien au monde ; ces spécimens-là sont rares et habituellement délicieux.
+N'oublions pas enfin d'évoquer les vieux singes qui feintent de ne pas aimer leur matière et de détester leur métier, mais qui ne manqueraient une heure de cours ou une sortie de fin d'année pour rien au monde ; ces spécimens-là sont rares et habituellement délicieux.
 
 Mais j'aimerais maintenant introduire une distinction moins apparente et pour moi plus importante entre professeurs.
 Les uns, hautains et insupportables, qui considèrent que leur statut et leur technique imposent le respect, et les autres, certainement plus fins ou simplement moins sûrs d'eux, qui comprennent que le respect des élèves, comme leur admiration ou leur soutien, se mérite, et que devant 30 élèves, rien n'est acquis.
@@ -160,7 +160,7 @@ Celui-là pense habituellement que l'enseignement est basé sur une relation d'a
 
 Sans développer davantage l'estime que j'ai pour cette deuxième catégorie d'enseignants, il serait bon de faire remarquer que c'est le système éducatif entier qui donne une fausse impression à ces professeurs insupportables.
 Le premier fait édifiant est la sûreté insolente du métier d'enseignant : 12 licenciements par an en France, quelle profession peut se vanter d'en faire autant ? Non pas que les professeurs sont tous bons, non, c'est juste que les mauvais ne sont, à tort, pas remerciés.
-La raison de ce problème est double : premièrement, le principe selon lequel le travail des fonctionnaires est sûr, avec toute son influence sur l'efficacité générale de ces derniers ; secondement le manque de contrôles et leur inefficacité des plus totales.
+La raison de ce problème est double : premièrement, le principe selon lequel le travail des fonctionnaires est sûr, avec toute son influence sur l'efficacité générale de ces derniers ; secondement le manque de contrôles et leur inefficacité des plus totales.
 Les inspecteurs d'académie n'évaluent un professeur qu'une ou deux fois par décennie et préviennent de leur arrivée (prévient-on un automobiliste qu'il va subir un test d'alcoolémie dans 500 mètres ?), permettant souvent arrangements et mises en scène pitoyables.
 Je préfère ne pas parler des compétences de ces inspecteurs, simplement parce que voir un professeur ni talentueux, ni pédagogue, ni intéressant écoper d'une superbe évaluation suite à une observation de 40 minutes, me met hors de moi.
 Rien de surprenant néanmoins quand on sait à quel niveau ce système d'évaluation est biaisé et corrompu.
@@ -172,7 +172,7 @@ Certaines écoles et universités américaines le font déjà avec un certain su
 Pour moi, ce devrait être fait à titre indicatif et transmis au chef d'établissement et/ou au recteur d'académie une fois par trimestre de manière anonyme.
 Évidemment, les élèves n'ont ni le recul, ni les compétences nécessaires à l'évaluation sérieuse d'un enseignant, mais une telle démarche permettrait peut-être d'éviter de se trimballer une prof d'anglais désavouée par 95% de ses anciens élèves pendant plus de dix ans, en orientant un tant soit peu les contrôles des inspecteurs vers des cas en particulier...
 
-Attardons-nous de ce fait sur les arguments des enseignants complètement contre un tel système : l'immaturité des élèves et leur manque d'objectivité, résolus par la seule prise en compte d'une prise de position massive des élèves ; le manque des critères d'évaluation, si les professeurs se donnaient la peine de visiter Note2be avant de crier haro, ils verraient que c'est détaillé, complet, simple et efficace ; le manque de sécurisation des données personnelles et l'accès libre à tous les internautes, ce sont des problèmes intrinsèques à Note2be, pas au système de notation par les élèves institutionnalisé dans les collèges, mais surtout lycées.
+Attardons-nous de ce fait sur les arguments des enseignants complètement contre un tel système : l'immaturité des élèves et leur manque d'objectivité, résolus par la seule prise en compte d'une prise de position massive des élèves ; le manque des critères d'évaluation, si les professeurs se donnaient la peine de visiter Note2be avant de crier haro, ils verraient que c'est détaillé, complet, simple et efficace ; le manque de sécurisation des données personnelles et l'accès libre à tous les internautes, ce sont des problèmes intrinsèques à Note2be, pas au système de notation par les élèves institutionnalisé dans les collèges, mais surtout lycées.
 
 Fait assez étonnant d'ailleurs, après quelques mois de pratique sur un site bordélique et provocateur comme Note2be, j'observe que contrairement à ce que l'on pourrait croire, les professeurs sévères, mais justes et intéressants, sont les mieux notés, tandis que des professeurs plus proches des élèves, mais moins efficaces en cours, sont moins plébiscités.
 Comme quoi, finalement, les élèves ne s'y trompent pas ! Paradoxalement, les évaluations foireuses sont majoritairement déposées par des professeurs qui souhaitent démontrer que l'on peut faire n'importe quoi avec ce genre de système...
@@ -198,5 +198,5 @@ C'est tout de suite plus facile, quand tout le monde travaille au même rythme e
 
 ## Bilan de sept années dans le secondaire
 
-Après sept ans de vie quotidienne dans l'enseignement secondaire français, que retiendrai-je ? Tout d'abord, qu'il est préférable d'être mesquin et hypocrite que franc et méchant ; que les inégalités naturelles sont plus existantes et irrépressibles que ce que je pensais, et que les négliger ou les nier ne mène qu'au désastre ; que l'on fait croire à des enfants et à de jeunes adultes que leur avenir est assuré alors que ce n'est pas le cas dans le monde du travail ; que l'on confie l'avenir de la France à des personnes parfois douteuses et pas ou mal contrôlées ; enfin, que l'on n'est jamais mieux servi que par soi-même, et que la réussite reste un sacrifice et une bataille personnelle.
+Après sept ans de vie quotidienne dans l'enseignement secondaire français, que retiendrai-je ? Tout d'abord, qu'il est préférable d'être mesquin et hypocrite que franc et méchant ; que les inégalités naturelles sont plus existantes et irrépressibles que ce que je pensais, et que les négliger ou les nier ne mène qu'au désastre ; que l'on fait croire à des enfants et à de jeunes adultes que leur avenir est assuré alors que ce n'est pas le cas dans le monde du travail ; que l'on confie l'avenir de la France à des personnes parfois douteuses et pas ou mal contrôlées ; enfin, que l'on n'est jamais mieux servi que par soi-même, et que la réussite reste un sacrifice et une bataille personnelle.
 Libre néanmoins à quiconque d'en tirer d'autres leçons, je l'espère sincèrement moins décevantes.
