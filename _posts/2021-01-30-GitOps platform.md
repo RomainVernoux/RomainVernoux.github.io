@@ -11,4 +11,4 @@ This guide describes how to set up, in probably less than an hour, the infrastru
 
 Continue reading on [dev.to](https://dev.to/zenika/google-kubernetes-engine-circleci-and-traefik-for-a-full-fledged-gitops-platform-in-the-cloud-part-1-2bai)
 or the [Zenika blog](https://blog.zenika.com/2021/01/15/google-kubernetes-engine-circleci-and-traefik-for-a-full-fledged-gitops-platform-in-the-cloud-part-1/).
-The guide and its resource are also on [GitHub](https://github.com/Zenika/labs-tooling/tree/master/ci-cd-platform-deployment).
+The guide and its resources are also on [GitHub](https://github.com/Zenika/labs-tooling/tree/master/ci-cd-platform-deployment).
