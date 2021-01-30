@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "L'enseignement secondaire en France, spirale de la médiocrité ?"
-date: 2009-06-25 18:12:35 +0100
+date: 2009-06-25
 categories: société french
 ---
 *Publié la première fois le 25 juin 2009, à la fin de ma scolarité dans l'enseignement secondaire français, sous le titre ambigu "L'Éducation Nationale, spirale de la médiocrité ?".*

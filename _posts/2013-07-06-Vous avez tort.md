@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Par définition, vous avez tort"
-date: 2013-07-06 23:27:41 +0100
+date: 2013-07-06
 categories: société french
 ---
 Ne prenez pas ce texte pour ce qu'il n'est pas.
@@ -22,8 +22,7 @@ Je ne cautionne pas, je ne suis pas d'accord, mais je considère que l'on devrai
 Je pense qu'aucune idée n'est supérieure à une autre et je ne pense pas qu'en général mes points de vue sont meilleurs que ceux des autres.
 En revanche, j'ai la prétention de penser qu'ils sont consistants (dans le sens "non-contradictoires") et que je suis prêt à les réévaluer face à une démonstration logiquement correcte du contraire.
 
-> N'engage pas de débat lors d'un dîner car celui qui n'a pas faim aura le dernier mot.<br>
-> (Richard Whately)
+> N'engage pas de débat lors d'un dîner car celui qui n'a pas faim aura le dernier mot — Richard Whately
 
 Si vous êtes de l'avis de ce bon Richard Whately – je ne sais pas qui est ce type, j'ai trouvé cette citation sur Google –, alors je pense que vous êtes passé à côté de ce que j'essaie de trouver sans relâche dans les débats, ce qui en fait parfois leur intérêt même, ce moment où je comprends la raison fondamentale de la divergence de point de vue, et où, par la même occasion, j'apprends à mieux connaître mon interlocuteur.
 De ma courte expérience, les plus fréquentes sont culturelles, de l'ordre de la conviction, de la croyance, des problèmes de définition ou ce que j'appelle des "failles logiques" (traduction officielle : "logical failure", même si "logical loophole" est tentant).
@@ -127,17 +126,14 @@ Peut-être aussi vous êtes-vous dit, au détour de l'un de mes exemples, que vo
 Je ne peux que vous rejoindre sur ce point : le langage naturel est souvent un handicap pour faire des raisonnements logiques et c'est la source de bien des désaccords.
 Je pense qu'en cas de doute, il ne faut pas hésiter à se rapprocher du langage logique : "ton raisonnement c'est "les zoos font oublier qu'on ne fait rien pour sauver les animaux en voie de disparition, donc il faut fermer les zoos" ?"
 
-> Définissez toujours un objet mathématique avant de l'utiliser.<br>
-> Si on définissait tous les mots avant les débats politiques, ils finiraient en cinq minutes.<br>
-> (Un de mes anciens profs de math)
+> Définissez toujours un objet mathématique avant de l'utiliser. Si on définissait tous les mots avant les débats politiques, ils finiraient en cinq minutes. — Un de mes anciens profs de math
 
 Autre handicap de la langue, la définition des mots.
 Bien souvent, nous supposons que les définitions des mots sont connues et qu'il n'y a aucun doute à leur sujet.
 Sur ce point, les exemples ne manquent pas : deux politiques qui débattent sur le concept de "vie décente", un débat houleux sur la question de la "liberté" des animaux dans les zoos, etc.
 Croire que des notions aussi complexes ont le même sens pour tous est au mieux naïf, au pire une façon de cacher son incapacité à les définir.
 
-> De même que le sens de chaque énoncé scientifique s'établit par réduction à un énoncé sur le donné, de même on doit pouvoir indiquer le sens de chaque concept, quelle que soit la branche de la science à laquelle il appartient, en le réduisant pas à pas aux autres concepts, jusqu'aux concepts du plus bas degré qui se réfèrent au donné lui-même.<br>
-> (Manifeste, 1985 : 119)
+> De même que le sens de chaque énoncé scientifique s'établit par réduction à un énoncé sur le donné, de même on doit pouvoir indiquer le sens de chaque concept, quelle que soit la branche de la science à laquelle il appartient, en le réduisant pas à pas aux autres concepts, jusqu'aux concepts du plus bas degré qui se réfèrent au donné lui-même. — Manifeste, 1985 : 119
 
 Comment définir un mot ? Avec des mots plus simples, comme dans un dictionnaire.
 Pour les informaticiens, un bon dictionnaire se doit de ressembler le plus possible à un arbre.
@@ -160,8 +156,7 @@ Votre interlocuteur ne lit pas dans vos pensées, et vous êtes le seul responsa
 
 Mais finalement, quels sont ces concepts fondamentaux, ceux sur lesquels tout le monde s'entend et que l'on s'accorde pour ne pas définir ? Premièrement, le résultat direct de perceptions : les saveurs, les odeurs, les sensations, les sons, les couleurs ; ensuite, les sentiments et la manière dont on les vit ; enfin, des notions trop simples pour être expliquées autrement que par l'exemple (ce qui les rend paradoxalement compliquées) : le bien, le beau, le vrai et leurs contraires.
 
-> Après tout, le bien et le mal ne sont que des valeurs arbitraires que nous aimerions absolues.<br>
-> (Un condamné, J-20)
+> Après tout, le bien et le mal ne sont que des valeurs arbitraires que nous aimerions absolues. — Un condamné, J-20
 
 Et si on ne prend pas la peine de les définir, n'est-ce pas parce qu'on ne veut pas s'avouer que ces notions-là sont entièrement culturelles, acquises, c'est-à-dire sans signification universelle ?
 
