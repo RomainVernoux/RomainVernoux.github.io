@@ -251,6 +251,16 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
+table.no-border {
+  border: none;
+}
+table.no-border td, table.no-border th{
+  border: none;
+}
+table.no-background tbody tr td{
+  background: none;
+}
+
 
 /*
  * Custom type
