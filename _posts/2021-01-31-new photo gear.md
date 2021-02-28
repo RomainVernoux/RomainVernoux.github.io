@@ -36,7 +36,7 @@ settled on the *Nikon Z6II* with the *Nikon Z 24-70mm f/4 S*.
 - Dual EXPEED 6 image processor
 - Dual memory card slots
 
-Next I know, I'm spending my lunch break enjoying a rare sight of the sun in the Parisian winter!
+Next thing I know, I'm spending my lunch break enjoying a rare sight of the sun in the Parisian winter!
 
 <a data-flickr-embed="true" data-context="true" href="https://www.flickr.com/photos/romainvernoux/50838919327/in/dateposted-public/" title="L&#x27;île aux Cygnes, Paris"><img src="https://live.staticflickr.com/65535/50838919327_a311e7163d_h.jpg" alt="L&#x27;île aux Cygnes, Paris"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 

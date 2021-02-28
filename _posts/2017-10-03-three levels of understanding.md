@@ -2,7 +2,7 @@
 layout: post
 title: "The 3 levels of understanding"
 date: 2017-10-03
-categories: philisophy
+categories: philosophy
 tags: english
 ---
 In the last couple of years, I have been a reader, a student, an apprentice, a researcher, a speaker, a trainer, and above all a passionate debater.
