@@ -125,18 +125,56 @@ Quite obviously, this is again a matter of compromise.
 
 ### Cascading failures and stateful services
 
-Microservices bring a different equation to the table: because there are more parts involved (multiple hosts, multiples services, multiple network links...), they are statistically more likely to fail.
-But these failures can be localized. You now have the option to react on failure and expose degraded service to your users.
+Compared to monoliths and their all-or-nothing availability, microservices bring a different equation to the table.
+Because they are composed of more moving parts (multiple hosts, multiples services, multiple network links...), they are statistically more likely to fail.
+Pushed to a certain scale, a microservice architecture is, at any point in time, statistically more likely to have at least one failing component than to be entirely healthy.
+Seriously, do the math. Assume a 99% overall uptime for all your components:
+- with only one component, the probability to be healthy is, well... 99%
+- with *N* components, the probability to be healthy is 99%<sup>N</sup>
+- 70 components are enough to have a <50% chance to not have any failure at a given time!
+
+So, microservices actually bring more failure, not less!
+But now you have the option to keep them localized and compensate for them.
+Again, this does not come for free, and there is actual work to be done to get there!
+
+The first solution that comes to mind is the *Bulkhead* pattern, in which multiple identical instances are used behind a load balancer to handle traffic.
+If one of the instances crashes, the load balancer stops sending traffic to it until it recovers (in some advanced versions of this pattern, the failing instance is automatically killed, and another one is spawned somewhere else).
+Beyond the infrastructure and configuration work implied here, there is also a hidden requirement that the service handling traffic is stateless.
+Otherwise, how could the load balancer transparently redirect traffic from a failing instance to a healthy one?
+This means that if your services are not stateless yet, you also need to invest to transform them accordingly... 
+  
+In the end, do you prefer investing on such error handling patterns to fight against statistics, or reducing the number of moving parts? Who said "compromise"?
 
 
 ### Transversal teams and change management
 
+Code is easier to change than organizations or culture. And cutting the code into small pieces will not magically change the way people work together.
+If your entire enterprise is organized around technical boundaries (e.g. a frontend team, a backend team, and an Ops team), massive efforts will be required to evolve to a lot of small, focused, multidisciplinary teams.
+Imagine, 10 teams with each their architect, frontend specialists, backend developers, performance expert, ops engineer, designer, product manager...
+How long would be the road from where you are to this vision?
+
+In a microservices setting, transversal teams are an anti-pattern, since they introduce, in their own way, coupling.
+I am not saying that you should do away with all the transversal teams, as the organization can choose to retain common guidelines (e.g., architecture, modeling, management...) or capitalize on some technologies (e.g., orchestration or monitoring tools).
+But to reduce the coupling, transversal teams should really act as communities of practice rather than as a pool of resources to deliver features, and be located as close as the product teams as possible.
+
+I will not go into the lengths of how hard change management is, but here goes for the compromise: how much energy into transforming the company's culture, and how much into delivery features to real users?
 
 
-After all, if you cannot successfully ship and maintain a monolithic architecture, what makes you think that you will do better with microservices?
+### Promise and compromise
+
+At the end of the day, one should really ask: what is there to win, and what am I ready to lose?
+
+Ending up with a lot of small services is the real only guarantee of microservices architecture.
+Decoupling, resilience, scaling, tech heterogeneity and autonomous focused teams will not come for free.
+They are the result of a tremendous company-wide effort, from the leadership to the infrastructure teams, affecting people, process and tools.
+And without them, your microservices architecture will quite surely fail: with a coupled model, unified tech stacks, no resilience or scaling strategy and only transversal teams, you will get the worst of distributed system, for no concret benefits.
+
+In fact, if you cannot successfully build and maintain a monolithic architecture, what makes you think that you will do better with microservices?
+It's the same, but way harder, in almost any imaginable way.
+
+Microservices only show you a road that was previously hidden. Walking on that road is all on you, and it will not be easy.
 
 
-Same tech, no degraded service, no scaling, transversal teams => all the risks, all the pain, no benefits
 
 ## This is no straight road
 
