@@ -21,11 +21,11 @@ On paper, microservices architectures offer a lot of benefits...
 
 ### Small, focused and decoupled services
 
-It is known that small systems are easier to reason about and build. Who has never noticed that software is never produced more efficiently than during the first few weeks of development?
+It is known that small systems are easier to reason about and build. Who has not noticed that software is never produced more efficiently than during the first few weeks of development?
 This also holds for maintenance: regardless of team seniority and turnover, it is always easier to keep alive and change behavior in a small codebase than in a large plate of spaghetti code.
 Eventually, all software is retired, either because too many mistakes were made and the team decides to start over, or because the requirements or the environment changed too much. 
-Again, replacing multiple small services is easier than redesigning an entire software, but the main benefit remains that it can happen progressively, over the course of multiple months, and without blocking other development efforts.
-The times of "we need to stop adding new features to the product to deeply refactor the codebase foundations" are over.
+Again, replacing multiple small services is easier than redesigning an entire software, but with multiple independent pieces this work can also happen progressively, over the course of multiple months, and without blocking other development efforts.
+The times of "we need to stop adding new features to the product to refactor the codebase foundations in depth" are over.
 
 Good news then! Microservices architectures are all about splitting software in multiple services and keeping them small.
 When done right, this code split follows the lines of the various concerns handled by the application.
@@ -40,7 +40,7 @@ This is why all monolithic architectures usually go for a large, generic framewo
 
 *"Jack of all trades, master of none"*, as the saying goes.
 Despite all their (often impressive) efforts, how could such frameworks provide, at the same time, the optimal solution for use cases requiring a fast startup (async tasks), best performance during a few minutes or hours (batch jobs) and everything (from high frequency/low complexity to low frequency/high complexity) in the spectrum of modern web application workloads?
-How could a database provide, at the same time, the best options to store structured, unstructured and binary data, regardless of response time, volume, scaling and consistency requirements?
+Similarly, how could a database offer, at the same time, the best options to store structured, unstructured and binary data, regardless of response time, volume, scaling and consistency requirements?
 
 The issue does not stop there, and soon enough a new, modern framework will appear that looks better suited for the job at hand.
 At this point, there will be no good option anymore: should you stick with the old, eventually abandoned framework, or rewrite the entire application? You will be stuck.  
@@ -57,7 +57,7 @@ This situation is quite easy to reason about, since the resilience of the system
 If anything goes wrong (host failure, crash, network failure, insufficient disk space...), the whole application is gone.
 
 With microservices, a failure only affects one or a few of the multiple parts of the system, leaving most of the services running.
-This means that you now have the opportunity to react to partial failure and expose a degraded service to your users.
+This means that you now have the opportunity to react to partial failure and offer a degraded (but still useful) service to your users instead of a global error message.
 
 Regarding scalability, monoliths can only grow vertically.
 That is, the only way to make a monolith faster or handle more requests is to make it run on a faster or bigger host.
@@ -65,39 +65,40 @@ That is, the only way to make a monolith faster or handle more requests is to ma
 Microservices, on the other hand, allow for multiple scaling strategies, which can even be combined:
 - vertical scaling: memory and CPUs are added to make things go faster
 - horizontal scaling: the load is shared between multiple identical instances behind a load balancer
-- sharding: the load is split between multiple instances depending on the data it needs to access
+- sharding: the load is routed to a different instance depending on the data it needs to access
 - functional decomposition: the service is split into smaller services with technologies and scaling strategies specific for each kind of load
 
 Of course, all scaling strategies are not always available. For instance, horizontal scaling requires the service to be stateless, and sharding requires the computation to be localized enough for the underlying data to be sharded. 
 One could also argue that some of these scaling strategies are also possible with monoliths, but to me this is already a step on the road to microservices!
 
-In any case, the take-away is that, in microservices architectures, the resilience and scaling strategies can be chosen independently for each service: a batch microservice could scale vertically and not have resilience requirements beyond a "retry later tomorrow", while a web server is made to use sharding and scale horizontally.
+In any case, in microservices architectures, the resilience and scaling strategies can be chosen independently for each service: a batch microservice could scale vertically and not have resilience requirements beyond a "retry again later", while a web server is designed from the beginning to use sharding and scale horizontally.
 None of these options will ever be available in a monolithic architecture.
 
 Finally, keep in mind that resilience and scalability decisions do not only pertain to services your team develops, as other components (databases, message brokers, API gateways...) come with their own tradeoff and scaling options, with a definitive impact on the behavior of the overall system.   
 
 ### Teams and organization
 
-As the size of a software grows, the size of the corresponding team tends to grow accordingly, often with the incorrect assumption that more people implies more code delivered.
-It is well documented that the effort required to synchronize team members is not linear in the number of people, but rather quadratic: to synchronize 2 people, 1 phone call is enough ; to synchronize 5 people, 20 one-to-one phone calls are required.
+As the size of a software grows, the size of its supporting team tends to grow accordingly, often with the incorrect assumption that more people implies more features delivered.
+It is well documented that the effort required to synchronize team members is not linear in the number of people, but rather quadratic: to synchronize 2 people, 1 phone call is enough; to synchronize 5 people, 20 one-to-one phone calls are required.
 Large meetings only solve this issue up to a point, arguably around 5 to 10 people.
 
 Microservices offer the opportunity to naturally split the work between small teams, each focused and knowledgeable about their microservices and the few they interact with.
-Although collaboration and synchronization points between teams is still required, the frequency and length of such events should be dramatically reduced.
+Although collaboration and synchronization points between teams is still required, their frequency and duration should be dramatically reduced.
 
 ## The untold story of the compromise
 
 After reading the previous section, you will probably really want to use microservices in your current project and all the other ones, past and future!
-But as everybody knows, there is no silver bullet, or no free lunch. Only compromises.
-So let me sing you a song that is rarely sung, the one about the road to microservices, and everything you lose along the way!
+But as everybody knows, there is no silver bullet and no free lunch, only compromises.
+So let me sing you a song that is rarely sung, the one about the road to microservices, and everything you must be ready to lose along the way!
 
 ### Small and coupled
 
 Models in monoliths are not created as a large pile of coupled objects by design.
-They progressively but inexorably get there, because concepts in the real world are inherently coupled, and simplifying reality to extract and maintain a simple, decoupled model over time is no easy task (it can actually be a full-time job).
-In monoliths, coupling can stay unnoticed for quite some time before the first symptoms appear, affecting either development velocity, ease of maintenance or performance.
+They progressively but inexorably get there, because concepts in the real world are inherently coupled, and simplifying reality to extract and maintain over time a simple, decoupled model is no easy task (it can actually be a full-time job).
+In monoliths, coupling can stay unnoticed for quite some time, before it eventually surfaces affecting development velocity, ease of maintenance or performance.
+
 In microservices, there is nowhere to hide. With parts of the model distributed across the network, the cost of coupling is orders of magnitude higher, and will almost instantly result in maintenance burden and performance bottlenecks.
-A lot more effort will also be required to fix the model: instead of refactoring a local set of objects, multiple services will now need to be merged, split and rearranged, with a global impact on the architecture.
+A lot more effort will also be required to fix the model: instead of refactoring a co-localized set of objects, multiple services will now need to be merged, split and rearranged, with a global impact on the architecture.
 
 Do not expect decoupling to come for free from splitting a large codebase into small pieces.
 In fact, it works the other way around: the split into small pieces will only work if your team already has the ability to design a decoupled model.
@@ -106,11 +107,11 @@ If your monolithic codebase looks like a plate of spaghettis, it is therefore a 
 With microservices, the model now has boundaries that are hard to move, and the possibility of a large scale redesign is essentially lost.
 If you get these boundaries wrong, you end up with a lot of small, coupled services, which is absolutely worse than a large, coupled model in a monolith.
 
-So here is the compromise: how confident are you in your ability to extract and maintain a useful, simple, decoupled model? How much splitting into small pieces are you willing to bet on it?
+So here is the compromise: how confident are you in your ability to extract and maintain a useful, simple, decoupled model? And how much splitting into small pieces are you willing to bet on it?
 
 ### The technology zoo
 
-Like in everything else, flexibility in technology options is great. But it comes with a price.
+Like in everything else, flexibility in technology options is great, but it comes with a price.
 Instead of one technology stack to master, you now have two, three, five, ten of them, each possibly made of multiple languages, frameworks, librairies and tools!
 And we are not only talking about development skills, but rather about a company-wide matter, from development and testing to integration, build tooling, deployment, configuration, monitoring, performance management, security...
 Having multiple technologies in production means having to maintain a pool of experts for each of them, in each department. Otherwise, the next rewrite from scratch will not be because of code quality but because of a lack of skills to implement simple changes.
@@ -118,7 +119,7 @@ Having multiple technologies in production means having to maintain a pool of ex
 Letting everyone use the languages and tools they like and hope for the best is clearly not a valid strategy, and some guidelines must be established.
 They can take the form of a reduced set of technology stacks to choose from (e.g., Netflix seems to focus on JVM technologies), or a particular process to test, validate and train people on new languages or frameworks. 
 
-Too many constraints, and you don't get the advertised benefits of technology heterogeneity; too few, and the fun in the technology zoo will not be for long!
+Too many constraints, and you don't get the advertised benefits of technology heterogeneity; too few, and the fun at the technology zoo will not last long!
 Quite obviously, this is again a matter of compromise.
 
 ### Cascading failures and stateful services
@@ -133,15 +134,15 @@ Seriously, do the math. Assume a 99% overall uptime for all your components:
 
 Microservices actually bring more failure, not less.
 But they also bring the opportunity to keep them localized and compensate for them.
-But again, it does not come for free, and there extra work to be done to get there!
+Again, it does not come for free, and there is extra work to be done to get there!
 
 The first solution that should come to mind is the *Bulkhead* pattern, in which multiple, identical instances of a service are used behind a load balancer to handle traffic.
-If one of the instances crashes, the load balancer stops sending traffic to it until it recovers (in some advanced versions of this pattern, the failing instance is automatically killed, and another one is spawned somewhere else).
+If one of the instances crashes, the load balancer stops sending requests to it until it recovers (in some advanced versions of this pattern, the failing instance is automatically killed, and another one is spawned).
 Beyond the infrastructure and configuration work implied here, there is also a hidden requirement that the service handling traffic needs to be stateless.
-If this is not the case, you also need to invest there. Of course, this is just for one pattern ; other ones (for instance, *Circuit breaker*), come with their own hypotheses about your system, and implementation burden.
+If this is not the case, you also need to invest time to get there. Of course, this is just for one pattern; other ones (for instance, *Circuit breaker*), come with their own hypotheses about your system, and implementation burden.
 
-In any case, keep in mind that unhandled errors have a greater impact in distributed systems, as you cannot simply rely on the nice transactional properties of a shared database.
-Without transactions, if one thing fails in one service, you have to explicitly undo something else in another service. And what if this other action fails?
+In any case, unhandled errors have a greater impact in distributed systems, as you cannot simply rely on the nice transactional properties of a shared database.
+Without transactions, if one thing fails in one service, you have to explicitly undo something else in another service. And what if this undo action also fails?
 Some patterns, such as *2-Phase Commit* or *Sagas*, can help here, but they also require extra work and come with their own trade-off, especially regarding coupling.
   
 So, in the end, do you prefer investing in patterns to fight against the cold reality of statistics, or reducing the number of moving parts? Who said "compromise"?
@@ -151,11 +152,11 @@ So, in the end, do you prefer investing in patterns to fight against the cold re
 Code is easier to change than organizations or culture. And cutting the code into small pieces will not magically change the way people work together.
 If your entire enterprise is organized around technical boundaries (e.g., a frontend team, a backend team, and an ops team), massive efforts will be required to evolve to a lot of small, focused, multidisciplinary teams.
 Imagine, 10 teams with each their architect, frontend specialists, backend developers, performance expert, ops engineer, designer, product manager...
-How long would be the road from where you currently are, to this vision?
+How much effort would be required to go from where you currently stand to this vision?
 
 In a microservices setting, transversal teams are an anti-pattern, since they introduce, in their own way, coupling.
 I am not saying that you should do away with all the transversal teams, as the organization can choose to retain common guidelines (e.g., architecture, modeling, management...) or capitalize on some technologies (e.g., orchestration or monitoring tools).
-But to reduce the coupling, transversal teams should really act as communities of practice (rather than as a pool of resources to deliver features) and be located as close to the product teams as possible.
+But to reduce the coupling, transversal teams should really act as communities of practices (rather than as a pool of resources to deliver features) and be located as close to the product teams as possible.
 
 I will not go into the lengths of how hard change management is, but here goes for the compromise: how much energy into transforming the company's culture, and how much into delivery features to real users?
 
@@ -165,14 +166,14 @@ At the end of the day, one should really wonder: what is there to win, and what 
 
 The only real guarantee of microservices architectures is to end up with a lot of small parts, lose transactional consistency, raise failure rates and challenge your organization. 
 
-Decoupling, resilience, scaling, tech heterogeneity and small focused teams will not come for free; they can only be the result of a tremendous company-wide effort, from the leadership to the infrastructure teams and back, regarding people and their interactions, processes and tools.
+Decoupling, resilience, scaling, tech heterogeneity and small focused teams will not come for free; they can only be the result of a tremendous company-wide effort, from the leadership to the infrastructure teams and back, regarding people, processes and tools.
 
 On the one hand, only with all these options in hand will you be able to succeed in the challenges that come with modern visions and large-scale projects.
 But on the other hand, without an impressive amount of upfront work and change in your organization, your microservices project will almost surely fail.
 
 With a coupled model, a single unified tech stack, no resilience or scaling strategies and only transversal teams, you will get the worst of distributed systems, for no actual benefits.
 
-Therefore, before actually jumping on the microservices bandwagon and losing the comfort of the monolith, be sure that you have what it takes to go all the way across the finish line.
+Therefore, before actually leaving the comfort of the monolith and jumping on the microservices bandwagon, be sure that you have what it takes to succeed.
 In fact, if you are currently failing to build and maintain a monolithic architecture, what makes you think that you will do better with microservices? It's all the same, but way harder, in almost any imaginable way.
 
 [![ROI along the road to microservices]({{ site.baseurl }}/public/resources/road-to-microservices/roi.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/roi.svg)
@@ -185,12 +186,12 @@ So I hear that you know what you are doing, have quite some time and money in fr
 
 Now you need a map. 
 
-For a variety of topics, we will discuss a spectrum of options of practices, tools and patterns, to compromise over.
+For a variety of topics, we will propose a spectrum of practices, tools and patterns, to compromise over.
 They will range from large, coupled, but simple approaches, closer to what we find in monoliths, to the small, decoupled but usually more complex ones, pertaining to microservices approaches.
 
 As we deep dive into each topic and options, we should not lose focus on what we are trying to achieve: decoupling (**D**), resilience (**R**), scaling (**S**), tech heterogeneity (**H**) and small, autonomous, focused teams (**T**).
 Even though it will sometimes look like an oversimplification, we will do our best to grade each practice or pattern depending on their alignment with these 5 objectives: either aligned (✔), misaligned (✘) or partially aligned, depending on implementation details or other factors (**?**).
-This should give you a good first idea of where you stand, and what directions you should follow next. 
+This should give you a good first idea of where you stand, and where to go next. 
 
 ### Architecture
 
@@ -256,7 +257,7 @@ What data consistency guarantees does the overall system offer?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Transactional | A shared database provides a global transactional consistency | ✘ | ✔ | **?** | ✘ | |
+| Transactional | A shared database provides a global transactional consistency | ✘ | ✔ | ✘ | ✘ | |
 | Local | Transactions are only local to each microservice; for scenario spanning multiple services, the strategy is mostly based on hope and prayers | ✔ | ✘ | ✔ | ✔ | |
 | Transactional distributed | A shared component or pattern implements distributed transactions, for instance 2-Phase Commit  | ✘ | ✔ | ✘ | ✘ | |
 | Eventual | A shared, resilient component, usually a message broker, is used to implement eventual consistency in the service layer | ✔ | **?** | ✔ | ✔ | |
@@ -269,7 +270,7 @@ How is the project versioned, built and packaged?
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
 | Monolithic | A single, large codebase in a single repository, all built and packaged as one | ✘ | | ✘ | ✘ | ✘ |
 | Monorepo | Multiple services in a single repository, all built as one, but packaged independently | ✘ | | ✘ | **?** | ✘ |
-| Advanced monorepo | Multiple services in a single repository; caching mechanisms allow to only build and package changed services | ✔ | | ✔ | **?** | **?** |
+| Advanced monorepo | Multiple services in a single repository; caching mechanisms allow to only build changed services | ✔ | | ✔ | **?** | **?** |
 | Multirepo | To each service its own repository and build/packaging mechanism | ✔ | | ✔ | ✔ | ✔ |
 
 ### Deployment
@@ -307,8 +308,8 @@ How is authentication implemented?
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
 | Embedded | A simple login/password form, backed by a custom-made authentication mechanism | ✘ | ✘ | ✘ | ✘ | |
-| SSO | A Single Sign-On mechanism is shared by all services, and integrated with each service independently | **?** | ✔ | ✘ | ✔ | ✔ |
-| API Gateway | Authentication is handled by a shared API gateway; tokens are propagated to all services | ✔ | ✔ | ✔ | ✔ | ✔ |
+| SSO | A Single Sign-On mechanism is shared by all services, and integrated with each service independently | **?** | ✔ | ✘ | ✔ | |
+| API Gateway | Authentication is handled by a shared API gateway; tokens are propagated to all services | ✔ | ✔ | ✔ | ✔ | |
 
 ### Testing
 
@@ -316,7 +317,7 @@ What is the adopted testing strategy?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Hopeful | Testing is doubting, and a real developer never makes mistakes | ✔ | ✘ | ✔ | | ✔ |
+| Hope-based | Testing is doubting, and a real developer never makes mistakes | ✔ | ✘ | ✔ | | ✔ |
 | Manual | Tests are mostly manual, usually made during test campaigns before important releases | ✘ | ✘ | ✘ | | ✘ |
 | Mostly end-to-end | Most of the tests are at the UI or API level, and consider the system as a whole | ✘ | ✘ | ✘ | | ✘ |
 | Expert | A balance between many unit tests, some integration tests, and few end-to-end (smoke) tests | ✔ | **?** | ✔ | | ✔ |
@@ -345,7 +346,7 @@ How are teams organized around the codebase boundaries?
 
 Of course, there will be many more aspects to consider and compromises to make, especially regarding organization and processes.
 Therefore, the key take-away here should be the way to reason about them: how aligned with your goals is each possible approach?
-Remember that decoupling, resilience, scalability, technology heterogeneity and small/autonomous teams are paramount to your microservices project success.  
+Remember that decoupling, resilience, scalability, technology heterogeneity and small/autonomous teams are paramount to the success of your microservices endeavour.  
 
 ### A map
 
@@ -356,23 +357,23 @@ So here you have it, the map of the road to microservices.
 To the left: large, coupled, but simple patterns, close to what is done in monoliths. To the right: small, decoupled but more complex ones, closer to microservice-friendly approaches.
 
 The options marked with asterisks (*) correspond to a reasonable implementation of a "Modular monolith".
-As pictured in the previous section, modular monoliths are a local optimum of the compromises on decoupling, resilience, scalability, technology heterogeneity and team organization, before having to pay the price of microservices architectures.
+As pictured in the previous chapter, modular monoliths are a local optimum of the compromises on decoupling, resilience, scalability, technology heterogeneity and team organization, before having to pay the price of microservices architectures.
 You would probably be surprised by how far a modular monolith, implemented with expertise, can scale.
 We are talking hundreds of thousands of users, millions in revenue, hundreds of gigabytes of data, and tens of developers.
 
 Marked with a dagger (†) are the options corresponding to the worst of both worlds, the (rightfully) feared "Distributed monolith", also known as microservices without a soul.
-The dagger also stands for what you will now and then feel in your back, in a very unpredictable and uncontrolled way, if you stay in that zone for too long.
+The dagger also stands for what will regularly hit you in the back, in a very unpredictable and uncontrolled way, if you stay in that zone for too long.
 Quite surprising also is the size of the "valley of despair" between a modular monolith and an on-par microservices architecture.
 We are now talking months of work, and what will look like unending trials and errors.
 
 Of course, microservices can bring benefits that are out of reach for even the most perfect monolith. So if you really, really need them, at least now you know some things about the road to walk.
-But before trying to reach this promised land, please double-check that you are correctly equipped, and absolutely prepared to go all the way to its end. 
+But before trying to reach this promised land, please double-check that you are correctly equipped, and absolutely prepared to not stop halfway. 
 
 Do. Or do not. There is no try.
 
 Or maybe there is.
 Start small, with a monolith. Try to learn as much as possible about your domain, and sharpen your skills and tools (this will take months, if not years).
 Once serving actual clients and supported by a successful business model, investigate whether you really are limited by the vertical scalability limits and rigidity of your monolith, rather than by simple lack of skills and good practices (hint: you are not).
-Then, check again that you are prepared for a long trip and that everyone, from developers to leadership, know the journey they embark on.
+Then, check again that you are prepared for a long trip and that everyone, from developers to leadership, knows the journey they embark on.
 
 For the road to microservices is dark and full of terrors.
