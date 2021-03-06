@@ -186,10 +186,11 @@ So I hear that you know what you are doing, have quite some time and money in fr
 Now you need a map. 
 
 For a variety of topics, we will discuss a spectrum of options of practices, tools and patterns, to compromise over.
-They will range from large, coupled, but simple approaches, closer to what we find in monoliths, to the small, decoupled but more complex ones, pertaining to microservices approaches.
+They will range from large, coupled, but simple approaches, closer to what we find in monoliths, to the small, decoupled but usually more complex ones, pertaining to microservices approaches.
 
-As we deep dive into it, do not lose focus on what we are trying to achieve: decoupling (**D**), resilience (**R**), scaling (**S**), tech heterogeneity (**H**) and small, autonomous, focused teams (**T**).
-Let's grade the various patterns depending on their alignment with these 5 objectives: either aligned (✔️), misaligned (❌) or depending on implementation details or other factors (❔). 
+As we deep dive into each topic and options, we should not lose focus on what we are trying to achieve: decoupling (**D**), resilience (**R**), scaling (**S**), tech heterogeneity (**H**) and small, autonomous, focused teams (**T**).
+Even though it will sometimes look like an oversimplification, we will do our best to grade each practice or pattern depending on their alignment with these 5 objectives: either aligned (✔), misaligned (✘) or partially aligned, depending on implementation details or other factors (**?**).
+This should give you a good first idea of where you stand, and what directions you should follow next. 
 
 ### Architecture
 
@@ -197,18 +198,18 @@ How small the pieces we cut our monolith into?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Monolith | A single codebase with no further modularization | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Modular monolith | A single codebase split into modules with few dependencies (imports and method calls) between them | ✔️ | ❌ | ❌ | ❌ | ❔ |
-| Large services | Multiple large services with each its own independent codebase (10-20 features or one DDD Bounded Context) | ✔️ | ❔ | ❔ | ❔ | ❔ |
-| Large services | Multiple small services with each its own independent codebase (1-5 features or two weeks work) | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| Monolith | A single codebase with no further modularization | ✘ | ✘ | ✘ | ✘ | ✘ |
+| Modular monolith | A single codebase split into modules with few dependencies (imports and method calls) between them | ✔ | ✘ | ✘ | ✘ | **?** |
+| Large services | Multiple large services with each its own independent codebase (10-20 features or one DDD Bounded Context) | ✔ | **?** | **?** | **?** | **?** |
+| Large services | Multiple small services with each its own independent codebase (1-5 features or two weeks work) | ✔ | ✔ | ✔ | ✔ | ✔ |
 
-What does it mean for our domain model?
+What are the corresponding options for our domain model?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Global | A global graph of highly connected entities; a lot of foreign keys, no duplication | ❌ | | | | ❌ |
-| Modular | Multiple smaller graphs of highly connected entities; foreign keys inside each graph, loose references across them, some duplication across modules | ❔ | | | | ❔ |
-| Agregates | A lot of small DDD "Agregates" (1-10 classes each); only loose references across them, some duplication | ✔️ | | | | ✔️ |
+| Global | A global graph of highly connected entities; many foreign keys, no duplication | ✘ | | | | ✘ |
+| Modular | Multiple smaller graphs of highly connected entities; foreign keys inside each graph, loose references across them, some duplication across modules | **?** | | | | **?** |
+| Aggregates | Many small DDD "Aggregates" (1-10 classes each); loose references and duplication instead of dependencies | ✔ | | | | ✔ |
 
 ### Technology stacks
 
@@ -216,27 +217,27 @@ What constraints are imposed on the choice of technologies (languages, framework
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Generic | One tech stack | | | ❌ | ❌ | ❔ |
-| Standard | One standard tech stack; exceptions only when absolutely necessary | | | ❔ | ❔ | ❔ |
-| Independent | Best stack chosen for each use case; probably with some guidelines | | | ✔️ | ✔️ | ✔️ |
+| Generic | One tech stack | | | ✘ | ✘ | **?** |
+| Standard | One standard tech stack; exceptions only when absolutely necessary | | | **?** | **?** | **?** |
+| Independent | Best stack chosen for each use case; probably with some guidelines | | | ✔ | ✔ | ✔ |
 
 ### Integration
 
-Do the different services share the persistence mechanism?
+Do services share the persistence mechanism?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Shared | A shared schema in a single database | ❌ | ❔ | ❔ | ❌ | ❌ |
-| Isolated | One schema per service in a single database | ✔️ | ❔ | ❔ | ❌ | ❔ |
-| Independent | Best stack chosen for each use case; probably some common guidelines | ✔️ | ❔ | ❔ | ✔️ | ✔️ |
+| Shared | A shared schema in a single database | ✘ | **?** | **?** | ✘ | ✘ |
+| Isolated | One schema per service in a single database | ✔ | **?** | **?** | ✘ | **?** |
+| Independent | Best stack chosen for each use case; probably some common guidelines | ✔ | **?** | **?** | ✔ | ✔ |
 
-How do the different services communicate with each others?
+How do services communicate with each others?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| In-process | Method calls in the same process | ❌ | ✔️ | ❌ | ❌ | ❌ |
-| Synchronous | Synchronous calls over the network, usually blocking requests to REST APIs | ❔ | ❔ | ✔️ | ✔️ | ✔️ |
-| Asynchronous | Asynchronous, event-driven communication through a message bus | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| In-process | Method calls in the same process | ✘ | ✔ | ✘ | ✘ | ✘ |
+| Synchronous | Synchronous calls over the network, for instance blocking requests through REST APIs | **?** | **?** | ✔ | ✔ | ✔ |
+| Asynchronous | Asynchronous, event-driven communication through a message bus | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 ### Failure handling
 
@@ -244,21 +245,21 @@ How do the services react to the failure of one of their dependencies?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| All-or-nothing | The services are either all up and running, or all failing at the same time | ❌ | ❌ | | | |
-| None | No resilience strategy in place; failures cascade across services depending on each other | ❌ | ❌ | | | |
-| Circuit breaker | Failing services are not called for some time; dependent services gracefully degrade their service in the meantime  | ❌ | ✔️ | | | |
-| Bulkhead | Multiple identical instances behind an healthiness-aware load balancer; traffic is only routed to healthy instances  | ✔️ | ✔️ | | | |
+| All-or-nothing | The services are either all up and running, or all failing at the same time | ✘ | ✘ | | | |
+| None | No resilience strategy in place; failures cascade through services depending on each other | ✘ | ✘ | | | |
+| Circuit breaker | Failing services are not called for some time; dependent services gracefully degrade their service in the meantime  | **?** | ✔ | | | |
+| Bulkhead | Multiple identical instances behind an healthiness-aware load balancer; traffic is only routed to healthy instances  | ✔ | ✔ | | | |
 
 ### Consistency
 
-What data consistency does the overall system provide? 
+What data consistency guarantees does the overall system offer? 
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Transactional | A shared database provides transactional consistency | ❌ | ✔️ | ❔ | ❌ | |
-| Local | Transactions are only local to each microservice; for scenario spanning multiple services, the strategy is mostly based on hope and prayers | ✔️ | ❌ | ✔️ | ✔️ | |
-| Transactional distributed | A shared component or pattern implements distributed transactions, usually 2-Phase Commit  | ❌ | ✔️ | ❌ | ❌ | |
-| Eventual | A shared, resilient component, usually a message broker, is used to implement eventual consistency in the service layer | ✔️ | ❔ | ✔️ | ✔️ | |
+| Transactional | A shared database provides a global transactional consistency | ✘ | ✔ | **?** | ✘ | |
+| Local | Transactions are only local to each microservice; for scenario spanning multiple services, the strategy is mostly based on hope and prayers | ✔ | ✘ | ✔ | ✔ | |
+| Transactional distributed | A shared component or pattern implements distributed transactions, for instance 2-Phase Commit  | ✘ | ✔ | ✘ | ✘ | |
+| Eventual | A shared, resilient component, usually a message broker, is used to implement eventual consistency in the service layer | ✔ | **?** | ✔ | ✔ | |
 
 ### Build
 
@@ -266,10 +267,10 @@ How is the project versioned, built and packaged?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Monolithic | A single, large codebase in a single repository, all built and packaged as one | ❌ | | ❌ | ❌ | ❌ |
-| Monorepo | Multiple services in a single repository, all built as one, but packaged independently | ❌ | | ❌ | ❔ | ❌ |
-| Advanced monorepo | Multiple services in a single repository; caching mechanisms allow to only build and package changed services | ✔️ | | ✔️ | ❔ | ❔ |
-| Multirepo | Each service its repository and build/packaging mechanism | ✔️ | | ✔️ | ✔️ | ✔️ |
+| Monolithic | A single, large codebase in a single repository, all built and packaged as one | ✘ | | ✘ | ✘ | ✘ |
+| Monorepo | Multiple services in a single repository, all built as one, but packaged independently | ✘ | | ✘ | **?** | ✘ |
+| Advanced monorepo | Multiple services in a single repository; caching mechanisms allow to only build and package changed services | ✔ | | ✔ | **?** | **?** |
+| Multirepo | To each service its own repository and build/packaging mechanism | ✔ | | ✔ | ✔ | ✔ |
 
 ### Deployment
 
@@ -277,27 +278,27 @@ In which format are the services packaged and deployed?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Platform-specific | The service is compiled and packaged in a format adapted to the target deployment platform (e.g., RPM package) | ❌ | | | ❌ | ❔ |
-| Platform-agnostic | The service is compiled and packaged in a standard format, runnable on multiple deployment platforms (e.g., containers) | ✔️ | | | ✔️ | ✔️ |
+| Platform-specific | The service is compiled and packaged in a format adapted to the target deployment platform (e.g., RPM package) | ✘ | | | ✘ | **?** |
+| Platform-agnostic | The service is compiled and packaged in a standard format, runnable on multiple deployment platforms (e.g., containers) | ✔ | | | ✔ | ✔ |
 
-Are the different services deployed independently?
+Are services deployed independently?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| All-at-once | All the services are re-deployed everytime one service changes | ❌ | | ❌ | | |
-| Train | All the services are re-deployed at a given interval | ❔ | | ✔️ | | |
-| Independent | Any changed service is deployed immediately and independently; multiple versions of a same service can co-exist |✔️ | | ✔️ | | |
+| All-at-once | All the services are re-deployed everytime one service changes | ✘ | | ✘ | | |
+| Train | All the services are re-deployed at a given, pre-defined interval | **?** | | ✔ | | |
+| Independent | Any changed service is deployed immediately and independently; multiple versions of a same service can co-exist |✔ | | ✔ | | |
 
 ### Frontend
 
-Is the frontend (UI) also split into modules or service? If so, what granularity?
+Is the frontend (UI) also split into modules or services? If so, with what granularity?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Monolithic | A single, large frontend | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Shared UI lib | The codebase is also split into multiple codebase; a library of shared UI components is used | ❔ | ✔️ | ✔️ | ❌ | ❔ |
-| Shared guidelines | The codebase is also split into multiple codebase; graphical guidelines are defined and shared | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
-| Micro frontends | Each microservice provides its own UI fragment; a global component assemble them at runtime | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| Monolithic | A single, large frontend | ✘ | ✘ | ✘ | ✘ | ✘ |
+| Shared UI lib | The codebase is also split into multiple codebases; a library of UI components is shared by all of them | **?** | ✔ | ✔ | ✘ | **?** |
+| Shared guidelines | The codebase is also split into multiple codebases; graphical guidelines are enforced | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Micro frontends | Each microservice provides its own UI fragment; a global component assembles them at runtime | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 ### Authentication
 
@@ -305,9 +306,9 @@ How is authentication implemented?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Embedded | A simple login/password form, backed by a custom-made authentication mechanism | ❌ | ❌ | ❌ | ❌ | |
-| SSO | A Single Sign-On mechanism is shared by all services, and integrated with each service independently | ❔ | ✔️ | ❌ | ✔️ | ✔️ |
-| API Gateway | Authentication is handled by a shared API gateway; tokens are propagated to all services | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
+| Embedded | A simple login/password form, backed by a custom-made authentication mechanism | ✘ | ✘ | ✘ | ✘ | |
+| SSO | A Single Sign-On mechanism is shared by all services, and integrated with each service independently | **?** | ✔ | ✘ | ✔ | ✔ |
+| API Gateway | Authentication is handled by a shared API gateway; tokens are propagated to all services | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 ### Testing
 
@@ -315,11 +316,11 @@ What is the adopted testing strategy?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Hopeful | Testing is doubting, and a real developer never makes mistakes | ✔️ | ❌ | ✔️ | | ✔️ |
-| Manual | Tests are mostly manual, usually made during test campaigns before important releases | ❌ | ❌ | ❌ | | ❌ |
-| Mostly end-to-end | Most of the tests are at the UI or API level, and test the system as a whole | ❌ | ❌ | ❌ | | ❌ |
-| Expert | A balance between a lot of unit tests, some integration tests, and a few end-to-end (smoke) tests | ✔️ | ❔ | ✔️ | | ✔️ |
-| Sensei | Expert mode, plus consumer-driven contract testing between dependent services to avoid breaking changes | ✔️ | ✔️ | ✔️ | | ✔️ |
+| Hopeful | Testing is doubting, and a real developer never makes mistakes | ✔ | ✘ | ✔ | | ✔ |
+| Manual | Tests are mostly manual, usually made during test campaigns before important releases | ✘ | ✘ | ✘ | | ✘ |
+| Mostly end-to-end | Most of the tests are at the UI or API level, and consider the system as a whole | ✘ | ✘ | ✘ | | ✘ |
+| Expert | A balance between many unit tests, some integration tests, and few end-to-end (smoke) tests | ✔ | **?** | ✔ | | ✔ |
+| Sensei | Expert mode, with consumer-driven contract testing between dependent services to detect breaking changes | ✔ | ✔ | ✔ | | ✔ |
 
 ### Logging and monitoring
 
@@ -327,9 +328,9 @@ How are logging and monitoring implemented?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Embedded | Simple, custom-made implementations in each service, usually through librairies | ❌ | ❌ | ❌ | ❌ | |
-| Standard | Despite custom implementations in each service, guidelines about format and exposition mechanism are shared | ✔️ | ❌ | ❌ | ✔️ | |
-| External | Logging and monitoring concerns are externalized, usually delegated to the infrastructure layer (e.g., Kubernetes) | ✔️ | ✔️ | ✔️ | ✔️ | |
+| Embedded | Simple, custom-made implementations in each service, usually via librairies | ✘ | ✘ | ✘ | ✘ | |
+| Standard | Despite custom implementations in each service, common guidelines about format and exposition mechanism are enforced | ✔ | ✘ | ✘ | ✔ | |
+| External | Logging and monitoring concerns are externalized, usually delegated to the infrastructure layer (e.g., Kubernetes) | ✔ | ✔ | ✔ | ✔ | |
 
 ### Organization
 
@@ -337,10 +338,14 @@ How are teams organized around the codebase boundaries?
 
 | Pattern | Description | D | R | S | H | T |
 | --- | --- | :---: | :---: | :---: | :---: | :---: |
-| Monolithic | A large, single team handles all the work | ❌ | | ❌ | ❌ | ❌ |
-| Transversal | Teams are organized around arbitrary technical boundaries (e.g., frontend, backend and ops) | ❌ | | ❌ | ❔ | ❌ |
-| Feature teams | Small, autonomous teams deliver end-to-end features, touching all parts of the codebase | ❔ | | ❔ | ❌ | ✔️ |
-| Product teams | Small, autonomous teams are focused on their parts of the system (e.g. a DDD Bounded Context); internal open-source is used for shared components | ✔️ | | ✔️ | ✔️ | ✔️ |
+| Monolithic | A large, single team handles all the work | ✘ | | ✘ | ✘ | ✘ |
+| Transversal | Teams are organized around arbitrary technical boundaries (e.g., frontend, backend and ops) | ✘ | | ✘ | **?** | ✘ |
+| Feature teams | Small, autonomous teams deliver end-to-end features, touching all parts of the codebase | **?** | | **?** | ✘ | ✔ |
+| Product teams | Small, autonomous teams are focused on their parts of the system (e.g. a DDD Bounded Context); internal open-source is used for shared components | ✔ | | ✔ | ✔ | ✔ |
+
+Of course, there will be many more aspects to consider and compromises to make, especially regarding organization and processes.
+Therefore, the key take-away here should be the way to reason about them: how aligned with your goals is each possible approach?
+Remember that decoupling, resilience, scalability, technology heterogeneity and small/autonomous teams are paramount to your microservices project success.  
 
 ### A map
 
@@ -350,24 +355,24 @@ So here you have it, the map of the road to microservices.
 
 To the left: large, coupled, but simple patterns, close to what is done in monoliths. To the right: small, decoupled but more complex ones, closer to microservice-friendly approaches.
 
-The options marked with asterisks (*) are those corresponding to a reasonable implementation of a "Modular monolith".
-As pictured in the previous section, they are a local optimum of the compromises on decoupling, resilience, scalability, technology heterogeneity and team organization, before having to pay the price of microservices architectures.
+The options marked with asterisks (*) correspond to a reasonable implementation of a "Modular monolith".
+As pictured in the previous section, modular monoliths are a local optimum of the compromises on decoupling, resilience, scalability, technology heterogeneity and team organization, before having to pay the price of microservices architectures.
 You would probably be surprised by how far a modular monolith, implemented with expertise, can scale.
 We are talking hundreds of thousands of users, millions in revenue, hundreds of gigabytes of data, and tens of developers.
 
-Marked with a dagger (†) are the options corresponding to the worst of both worlds, the feared "Distributed monolith", or microservices without a soul.
-The dagger also represents what you will feel in your back now and then, in a very unpredictable and uncontrolled way if you stay in that zone for too long.
+Marked with a dagger (†) are the options corresponding to the worst of both worlds, the (rightfully) feared "Distributed monolith", also known as microservices without a soul.
+The dagger also stands for what you will now and then feel in your back, in a very unpredictable and uncontrolled way, if you stay in that zone for too long.
 Quite surprising also is the size of the "valley of despair" between a modular monolith and an on-par microservices architecture.
-We are now talking months of work, and unending trials and errors.
+We are now talking months of work, and what will look like unending trials and errors.
 
-Of course, microservices can bring benefits that are out of reach of even the most perfect monolith. So if you really, really need them, now you know the road.
-But before trying to reach this promised land, please double-check that you are correctly equipped, and absolutely prepared to go all the way. 
+Of course, microservices can bring benefits that are out of reach for even the most perfect monolith. So if you really, really need them, at least now you know some things about the road to walk.
+But before trying to reach this promised land, please double-check that you are correctly equipped, and absolutely prepared to go all the way to its end. 
 
 Do. Or do not. There is no try.
 
 Or maybe there is.
 Start small, with a monolith. Try to learn as much as possible about your domain, and sharpen your skills and tools (this will take months, if not years).
-Once serving actual clients and propulsed by a successful business, investigate whether you really are limited by the vertical scalability limits and rigidity of your monolith, rather than by simple lack of skills and good practices (hint: you are not).
+Once serving actual clients and supported by a successful business model, investigate whether you really are limited by the vertical scalability limits and rigidity of your monolith, rather than by simple lack of skills and good practices (hint: you are not).
 Then, check again that you are prepared for a long trip and that everyone, from developers to leadership, know the journey they embark on.
 
 For the road to microservices is dark and full of terrors.
