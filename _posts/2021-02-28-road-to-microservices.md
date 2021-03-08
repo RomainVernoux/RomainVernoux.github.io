@@ -184,9 +184,12 @@ Microservices only show you a road that was previously hidden. Walking on that r
 
 So I hear that you know what you are doing, have quite some time and money in front of you, and decided to walk that road.
 
-Now you need a map. 
+Now you need a map.
 
-For a variety of topics, we will propose a spectrum of practices, tools and patterns, to compromise over.
+As you will see, this is no straight road. There will be many paths to explore, and many directions to choose from.
+This chapter is a short guide for some of the many crossroads you should prepare yourself to encounter.
+
+For a variety of topics, mostly technical for now, we will indeed propose a spectrum of practices, tools and patterns, to compromise over.
 They will range from large, coupled, but simple approaches, closer to what we find in monoliths, to the small, decoupled but usually more complex ones, pertaining to microservices approaches.
 
 As we deep dive into each topic and options, we should not lose focus on what we are trying to achieve: decoupling (**D**), resilience (**R**), scaling (**S**), tech heterogeneity (**H**) and small, autonomous, focused teams (**T**).
