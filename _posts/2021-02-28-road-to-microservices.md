@@ -205,7 +205,7 @@ How small the pieces we cut our monolith into?
 | Monolith | A single codebase with no further modularization | ✘ | ✘ | ✘ | ✘ | ✘ |
 | Modular monolith | A single codebase split into modules with few dependencies (imports and method calls) between them | ✔ | ✘ | ✘ | ✘ | **?** |
 | Large services | Multiple large services with each its own independent codebase (10-20 features or one DDD Bounded Context) | ✔ | **?** | **?** | **?** | **?** |
-| Large services | Multiple small services with each its own independent codebase (1-5 features or two weeks work) | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Microservices | Multiple small services with each its own independent codebase (1-5 features or two weeks work) | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 What are the corresponding options for our domain model?
 
