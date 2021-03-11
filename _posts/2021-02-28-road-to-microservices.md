@@ -25,15 +25,15 @@ Consider the following functional architecture diagram of an e-commerce platform
 
 Related features have already been grouped together, and dependencies between sets of features illustrated with arrows.
 
-In a **monolithic architecture**, all features would be implemented in a single codebase, with no visible modularization of the code.
+In **monolithic** architectures, all features are implemented in a single codebase, with no visible modularization of the code.
 Objects reference each other in complex and intricate ways, making the code hard to read, understand and maintain:
 
 [![Monolithic architecture]({{ site.baseurl }}/public/resources/road-to-microservices/monolith.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/monolith.svg)
 
 Teams usually end up in this tough spot because of features piling up without a clear architectural strategy.
-Indeed, this situation is far less likely if the architecture diagram pictured is already drawn and shared with the team! 
+Indeed, this situation is far less likely if the architecture diagram pictured above is already drawn and shared with the team! 
 
-In this case, we will hopefully end up with modules or packages following the functional boundaries, with few dependencies (imports and method calls) between them.
+In this case, we can hope for modules or packages following the functional boundaries, with few dependencies (imports and method calls) between them.
 Some people call this a **modular monolith**:
 
 [![Modular monolith]({{ site.baseurl }}/public/resources/road-to-microservices/modular-monolith.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/modular-monolith.svg)
@@ -49,7 +49,7 @@ With this approach, people usually end up with what I call **large services**:
 
 [![Microservices]({{ site.baseurl }}/public/resources/road-to-microservices/microservices.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/microservices.svg)
 
-Finding the boundaries here is a bit trickier, as architects must deep-dive into the model to find meaningful seams.
+Finding the boundaries here is a bit trickier, as architects must deep-dive into the model to find (or create) meaningful seams.
 But we will talk about that later.
 
 ## The promise
