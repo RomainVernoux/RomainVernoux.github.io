@@ -76,7 +76,7 @@ None of these options will ever be available in a monolithic architecture.
 
 Finally, keep in mind that resilience and scalability decisions do not only pertain to services your team develops, as other components (databases, message brokers, API gateways...) come with their own tradeoff and scaling options, with a definitive impact on the behavior of the overall system.   
 
-### Teams and organization
+### Small, autonomous teams
 
 As the size of a software grows, the size of its supporting team tends to grow accordingly, often with the incorrect assumption that more people implies more features delivered.
 It is well documented that the effort required to synchronize team members is not linear in the number of people, but rather quadratic: to synchronize 2 people, 1 phone call is enough; to synchronize 5 people, 20 one-to-one phone calls are required.
