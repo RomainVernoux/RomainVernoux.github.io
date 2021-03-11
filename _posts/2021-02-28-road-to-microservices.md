@@ -15,6 +15,43 @@ For the road to microservices is dark and full of terrors.
 
 <!--more-->
 
+## Microservices, a definition
+
+It is always good practice to define concepts before using them. So, what is a microservice? What are microservices architectures?
+
+Consider the following functional architecture diagram of an e-commerce platform, resulting from the hard work of an architect somewhere. 
+
+[![Architecture of an e-commerce platform]({{ site.baseurl }}/public/resources/road-to-microservices/context-mapping-example.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/context-mapping-example.svg)
+
+Related features have already been grouped together, and dependencies between sets of features illustrated with arrows.
+
+In a **monolithic architecture**, all features would be implemented in a single codebase, with no visible modularization of the code.
+Objects reference each other in complex and intricate ways, making the code hard to read, understand and maintain:
+
+[![Monolithic architecture]({{ site.baseurl }}/public/resources/road-to-microservices/monolith.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/monolith.svg)
+
+Teams usually end up in this tough spot because of features piling up without a clear architectural strategy.
+Indeed, this situation is far less likely if the architecture diagram pictured is already drawn and shared with the team! 
+
+In this case, we will hopefully end up with modules or packages following the functional boundaries, with few dependencies (imports and method calls) between them.
+Some people call this a **modular monolith**:
+
+[![Modular monolith]({{ site.baseurl }}/public/resources/road-to-microservices/modular-monolith.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/modular-monolith.svg)
+
+Going further on that path, the next logical approach is to split this large codebase into multiple parts.
+The module/package boundaries are a good place to start, but there might be some exceptions.
+
+With this approach, people usually end up with what I call **large services**:
+
+[![Large services]({{ site.baseurl }}/public/resources/road-to-microservices/large-services.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/large-services.svg)
+
+**Microservices** are "just" one step further, splitting again each of the codebases into smaller parts:
+
+[![Microservices]({{ site.baseurl }}/public/resources/road-to-microservices/microservices.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/microservices.svg)
+
+Finding the boundaries here is a bit trickier, as architects must deep-dive into the model to find meaningful seams.
+But we will talk about that later.
+
 ## The promise
 
 On paper, microservices architectures offer a lot of benefits...
