@@ -23,7 +23,7 @@ Consider the following functional architecture diagram of an e-commerce platform
 
 [![Architecture of an e-commerce platform]({{ site.baseurl }}/public/resources/road-to-microservices/context-mapping-example.svg)]({{ site.baseurl }}/public/resources/road-to-microservices/context-mapping-example.svg)
 
-Related features have already been grouped together, and dependencies between sets of features illustrated with arrows.
+Related features have already been grouped together, and dependencies between sets of features are illustrated with arrows.
 
 In **monolithic** architectures, all features are implemented in a single codebase, with no visible modularization of the code.
 Objects reference each other in complex and intricate ways, making the code hard to read, understand and maintain:
